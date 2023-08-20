@@ -52,31 +52,10 @@ int print_integer(va_list argList)
  */
 int print_binary(va_list argList)
 {
-	unsigned int number, a32bas, i, sum;
-	unsigned int bits_buffer[32];
-	int count;
+	unsigned int number = va_arg(argList, unsigned int);
+	char *str = to_base(number, 2, 0);
 
-	number = va_arg(argList, unsigned int);
-	a32bas = 2147483648; /* all 32 bits are set*/
-	bits_buffer[0] = number / a32bas;
-	for (i = 1; i < 32; i++)
-	{
-		a32bas /= 2;
-		bits_buffer[i] = (number / a32bas) % 2;
-	}
-
-	for (i = 0, sum = 0, count = 0; i < 32; i++)
-	{
-		sum += bits_buffer[i];
-		if (sum || i == 31)
-		{
-			char z = '0' + bits_buffer[i];
-
-			_putc(z);
-			count++;
-		}
-	}
-	return (count);
+	return (_puts(str));
 }
 
 /**
@@ -89,28 +68,9 @@ int print_binary(va_list argList)
 int print_uns_integer(va_list argList)
 {
 	long int n = va_arg(argList, unsigned long int);
-	char buffer[BUFFER_SIZE];
-	int printed = 0, i = 0, j;
+	char *str = to_base(n, 10, 0);
 
-	if (n == 0)
-	{
-		_putc('0');
-		return (1);
-	}
-
-	while (n > 0)
-	{
-		buffer[i++] = (n % 10) + '0';
-		n /= 10;
-	}
-
-	for (j = i - 1; j >= 0; j--)
-	{
-		_putc(buffer[j]);
-		printed++;
-	}
-
-	return (printed);
+	return (_puts(str));
 }
 
 /**
@@ -123,26 +83,7 @@ int print_uns_integer(va_list argList)
 int print_octal_integer(va_list argList)
 {
 	long int n = va_arg(argList, unsigned long int);
-	char buffer[BUFFER_SIZE];
-	int printed = 0, i = 0, j;
+	char *str = to_base(n, 8, 0);
 
-	if (n == 0)
-	{
-		_putc('0');
-		return (1);
-	}
-
-	while (n > 0)
-	{
-		buffer[i++] = (n % 8) + '0';
-		n /= 8;
-	}
-
-	for (j = i - 1; j >= 0; j--)
-	{
-		_putc(buffer[j]);
-		printed++;
-	}
-
-	return (printed);
+	return (_puts(str));
 }

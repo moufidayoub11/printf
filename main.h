@@ -21,7 +21,9 @@ typedef struct FormatSpecifier
 } fs_t;
 
 /* Printing Functions */
-int _puts(char *s, int len);
+char *to_base(unsigned long int num, int base, int lowercase);
+int count_digits(int num);
+int _puts(char *s);
 int _putc(char c);
 int _printf(const char *format, ...);
 int printf_helper(const char *format, int currentIndex, va_list argList);

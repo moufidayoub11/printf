@@ -24,16 +24,12 @@ int print_character(va_list argList)
  */
 int print_string(va_list argList)
 {
-	int length = 0;
 	char *str = va_arg(argList, char *);
 
 	if (str == NULL)
-		return (_puts("(null)", 6));
+		return (_puts("(null)"));
 
-	while (str[length] != '\0')
-		length++;
-
-	return (_puts(str, length));
+	return (_puts(str));
 }
 
 /**
