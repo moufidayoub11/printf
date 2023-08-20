@@ -12,7 +12,7 @@ int print_character(va_list argList)
 {
 	char c = va_arg(argList, int);
 
-	return (_putchar(c));
+	return (_putc(c));
 }
 
 /**
@@ -47,5 +47,5 @@ int print_percent_sign(va_list argList)
 {
 	UNUSED(argList);
 
-	return (_putchar('%'));
+	return (_putc('%'));
 }

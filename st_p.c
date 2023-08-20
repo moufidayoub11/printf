@@ -14,13 +14,13 @@ int _puts(char *s, int len)
 }
 
 /**
- * _putchar - Prints a string
+ * _putc - Prints a string
  *
  * @c: the char to print
  *
  * Return: Number of chars printed
  */
-int _putchar(char c)
+int _putc(char c)
 {
 	return (write(1, &c, 1));
 }

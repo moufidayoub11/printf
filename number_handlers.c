@@ -16,14 +16,14 @@ int print_integer(va_list argList)
 
 	if (n == 0)
 	{
-		_putchar('0');
+		_putc('0');
 		return (1);
 	}
 
 	num = (unsigned int)n;
 	if (n < 0)
 	{
-		_putchar('-');
+		_putc('-');
 		num = (unsigned long int)((-1) * n);
 		printed++;
 	}
@@ -36,13 +36,20 @@ int print_integer(va_list argList)
 
 	for (j = i - 1; j >= 0; j--)
 	{
-		_putchar(buffer[j]);
+		_putc(buffer[j]);
 		printed++;
 	}
 
 	return (printed);
 }
 
+/**
+ * print_binary - Prints a number
+ *
+ * @argList: the list a of arguments
+ *
+ * Return: Number of chars printed
+ */
 int print_binary(va_list argList)
 {
 	unsigned int number, a32bas, i, sum;
@@ -65,7 +72,7 @@ int print_binary(va_list argList)
 		{
 			char z = '0' + bits_buffer[i];
 
-			_putchar(z);
+			_putc(z);
 			count++;
 		}
 	}

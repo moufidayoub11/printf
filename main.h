@@ -22,7 +22,7 @@ typedef struct FormatSpecifier
 
 /* Printing Functions */
 int _puts(char *s, int len);
-int _putchar(char c);
+int _putc(char c);
 int _printf(const char *format, ...);
 int printf_helper(const char *format, int currentIndex, va_list argList);
 
