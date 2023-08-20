@@ -39,5 +39,6 @@ int print_hexa_upper(va_list argList);
 int print_hexa_lower(va_list argList);
 int print_special(va_list argList);
 int print_pointer(va_list argList);
-
+int print_rev(va_list argList);
+int print_rot13(va_list argList);
 #endif /* _PRINTF_H */
