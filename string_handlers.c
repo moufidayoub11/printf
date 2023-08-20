@@ -12,8 +12,9 @@ int print_character(va_list argList)
 {
 	char c = va_arg(argList, int);
 
-	return (write(1, &c, 1));
+	return (_putchar(c));
 }
+
 /**
  * print_string - Prints a string
  *
@@ -32,7 +33,7 @@ int print_string(va_list argList)
 	while (str[length] != '\0')
 		length++;
 
-	return (write(1, str, length));
+	return (_puts(str, length));
 }
 
 /**
@@ -46,5 +47,5 @@ int print_percent_sign(va_list argList)
 {
 	UNUSED(argList);
 
-	return (write(1, "%%", 1));
+	return (_putchar('%'));
 }

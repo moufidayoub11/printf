@@ -16,6 +16,7 @@ int printf_helper(const char *format, int currentIndex, va_list argList)
 
 	fs_t fs_types[] = {
 		{'c', print_character}, {'s', print_string}, {'%', print_percent_sign},
+		{'i', print_integer}, {'d', print_integer},
 		{'\0', NULL}
 	};
 	for (i = 0; fs_types[i].specifier != '\0'; i++)

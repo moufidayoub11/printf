@@ -6,6 +6,7 @@
 #include <stdio.h>
 
 #define UNUSED(x) (void)(x)
+#define BUFFER_SIZE 1024
 
 /**
  * struct FormatSpecifier - Struct to represent a format specifier
@@ -20,11 +21,14 @@ typedef struct FormatSpecifier
 } fs_t;
 
 /* Printing Functions */
+int _puts(char *s, int len);
+int _putchar(char c);
 int _printf(const char *format, ...);
 int printf_helper(const char *format, int currentIndex, va_list argList);
 
 int print_character(va_list argList);
 int print_string(va_list argList);
 int print_percent_sign(va_list argList);
+int print_integer(va_list argList);
 
 #endif /* _PRINTF_H */
