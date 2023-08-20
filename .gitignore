@@ -1,0 +1,34 @@
+# Ignore compiled executables and object files
+*.out
+*.o
+
+# Ignore build directories
+/build/
+/bin/
+/target/
+
+# Ignore editor and IDE files
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln
+*.suo
+*.user
+*.userprefs
+*.sublime-workspace
+*.sublime-project
+
+# Ignore generated documentation
+/doc/
+
+# Ignore test and test data files
+/test/
+*.test
+
+# Ignore any log files
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
