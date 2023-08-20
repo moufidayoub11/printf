@@ -46,7 +46,7 @@ int print_rev(va_list argList)
 }
 
 /**
- * print_pointer - Prints a string with rot13 encreption
+ * print_rot13 - Prints a string with rot13 encreption
  *
  * @argList: the list a of arguments
  *
