@@ -44,7 +44,7 @@ int print_integer(va_list argList)
 }
 
 /**
- * print_binary - Prints a number
+ * print_binary - Prints a binary
  *
  * @argList: the list a of arguments
  *
@@ -77,4 +77,72 @@ int print_binary(va_list argList)
 		}
 	}
 	return (count);
+}
+
+/**
+ * print_uns_integer - Prints an unsigned number
+ *
+ * @argList: the list a of arguments
+ *
+ * Return: Number of chars printed
+ */
+int print_uns_integer(va_list argList)
+{
+	long int n = va_arg(argList, unsigned long int);
+	char buffer[BUFFER_SIZE];
+	int printed = 0, i = 0, j;
+
+	if (n == 0)
+	{
+		_putc('0');
+		return (1);
+	}
+
+	while (n > 0)
+	{
+		buffer[i++] = (n % 10) + '0';
+		n /= 10;
+	}
+
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putc(buffer[j]);
+		printed++;
+	}
+
+	return (printed);
+}
+
+/**
+ * print_octal_integer - Prints an octal number
+ *
+ * @argList: the list a of arguments
+ *
+ * Return: Number of chars printed
+ */
+int print_octal_integer(va_list argList)
+{
+	long int n = va_arg(argList, unsigned long int);
+	char buffer[BUFFER_SIZE];
+	int printed = 0, i = 0, j;
+
+	if (n == 0)
+	{
+		_putc('0');
+		return (1);
+	}
+
+	while (n > 0)
+	{
+		buffer[i++] = (n % 8) + '0';
+		n /= 8;
+	}
+
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putc(buffer[j]);
+		printed++;
+	}
+
+	return (printed);
 }
