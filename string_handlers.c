@@ -28,7 +28,7 @@ int print_string(va_list argList)
 	char *str = va_arg(argList, char *);
 
 	if (str == NULL)
-		str = "(null)";
+		return (_puts("(null)", 6));
 
 	while (str[length] != '\0')
 		length++;

@@ -64,6 +64,7 @@ int print_binary(va_list argList)
 		if (sum || i == 31)
 		{
 			char z = '0' + bits_buffer[i];
+
 			_putchar(z);
 			count++;
 		}
