@@ -67,7 +67,7 @@ int print_binary(va_list argList)
  */
 int print_uns_integer(va_list argList)
 {
-	long int n = va_arg(argList, unsigned long int);
+	unsigned int n = va_arg(argList, unsigned int);
 	char *str = to_base(n, 10, 0);
 
 	return (_puts(str));
@@ -82,7 +82,7 @@ int print_uns_integer(va_list argList)
  */
 int print_octal_integer(va_list argList)
 {
-	long int n = va_arg(argList, unsigned long int);
+	unsigned int n = va_arg(argList, unsigned int);
 	char *str = to_base(n, 8, 0);
 
 	return (_puts(str));

@@ -9,7 +9,7 @@
  */
 int print_hexa_lower(va_list argList)
 {
-	long int n = va_arg(argList, unsigned long int);
+	unsigned int n = va_arg(argList, unsigned int);
 	char *str = to_base(n, 16, 1);
 
 	return (_puts(str));
@@ -24,7 +24,7 @@ int print_hexa_lower(va_list argList)
  */
 int print_hexa_upper(va_list argList)
 {
-	long int n = va_arg(argList, unsigned long int);
+	unsigned int n = va_arg(argList, unsigned int);
 	char *str = to_base(n, 16, 0);
 
 	return (_puts(str));
