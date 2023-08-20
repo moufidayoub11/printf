@@ -19,6 +19,7 @@ int printf_helper(const char *format, int currentIndex, va_list argList)
 		{'i', print_integer}, {'d', print_integer}, {'b', print_binary},
 		{'u', print_uns_integer}, {'o', print_octal_integer},
 		{'x', print_hexa_lower}, {'X', print_hexa_upper},
+		{'S', print_special},
 		{'\0', NULL}
 	};
 	for (i = 0; fs_types[i].specifier != '\0'; i++)
