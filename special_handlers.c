@@ -7,9 +7,9 @@
  *
  * Return: Number of chars printed
  */
-int print_pointer(va_list l)
+int print_pointer(va_list argList)
 {
-	unsigned long int pointer = va_arg(l, unsigned long int);
+	unsigned long int pointer = va_arg(argList, unsigned long int);
 	char *parsed_p;
 	int i = 0;
 
