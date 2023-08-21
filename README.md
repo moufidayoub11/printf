@@ -74,8 +74,7 @@ This custom `printf` implementation supports a variety of format specifiers, inc
 
 Please refer to the header file `main.h` for a complete list of format specifiers and their corresponding functions.
 
+
 ## Contributing
 
-If you'd like to contribute to this project or report any issues, please feel free to open an issue or submit a pull request on the GitHub repository.
-
-Thank you for using this custom `printf` implementation!
+At this time, we are not accepting contributions. This may change in the future, so please check back later.
